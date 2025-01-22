@@ -14,7 +14,7 @@ const Footer = () => {
     });
   }, []); // Empty dependency array ensures it runs once on mount
   return (
-    <footer id="Hubungi" className="fade-in text-black pt-28">
+    <footer id="Hubungi" className="fade-in text-black">
       {/* Newsletter Section */}
       <div className="py-12 text-center border-b border-blue-300"></div>
 
@@ -55,11 +55,11 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div className="">
-          <div className="flex justify-center">
+          <div className="flex sm:justify-start md:justify-start lg:justify-center ">
             <h3 className="text-lg font-semibold mb-4 border-b border-yellow-500 inline-block">Quick Links</h3>
           </div>
-          <div className="flex justify-center">
-            <ul className="mt-4 space-y-2">
+          <div className="flex sm:justify-start md:justify-start lg:justify-center">
+            <ul className="mt-4 grid grid-cols-2 gap-2 ">
               {["Utama", "Pemesanan", "Tentang", "Layanan", "Biaya", "Testimoni", "Hubungi"].map((link, idx) => (
                 <li key={idx}>
                   <Link to={`#${link}`}>{link}</Link>
@@ -68,7 +68,6 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        {/* 
 
         {/* Work Hours */}
         <div>
